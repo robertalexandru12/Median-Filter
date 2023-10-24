@@ -151,10 +151,6 @@ int16_t calc(const vector<vector<int16_t>> &mat, int p1, int p2, int prag,string
     return border[border.size()/2];
 }
 int main() {
-   /* time_t start, end;
-    time(&start);
-
-    ios_base::sync_with_stdio(false);*/
     ifstream f;
     string s;
     vector<vector<int16_t>> mat;
@@ -181,11 +177,7 @@ int main() {
         for(int j=0;j<m;j++){
     
             mat1[i][j]=calc(mat,i,j,pas,sort);
-            //if(mat[i][j]!=mat1[i][j]) k--;
-           //if(j==m-1) k++;
         }
-       // k++;
-        //if(i==mat.size()-1) k++;
 
 
     }
@@ -199,18 +191,11 @@ int main() {
         for (int j = 0;j<m;j++)
         {
 
-            //g<<mat[i][j]<<" ";
             outfile << mat1[i][j]<<" ";
         }
-        //outfile<<endl;
     }
 
 
     outfile.close();
     f.close();
-   /* time(&end);
-    double time_taken = double(end - start);
-    cout << "Timp : " << fixed
-         << time_taken << setprecision(5);
-    cout << " sec " << endl;*/
 }
